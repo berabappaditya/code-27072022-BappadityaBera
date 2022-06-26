@@ -1,0 +1,13 @@
+.productCard {
+}
+.productCard__image {
+  margin-bottom: -3rem;
+}
+
+.productCard__info {
+  width: 60%;
+}
+
+.aboutCard__info {
+  width: 60%;
+}
