@@ -2,11 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Preview
+## [live >](https://code-27072022-bappadityabera.netlify.app/)
+![screencapture-localhost-3000-2022-06-28-00_05_32](https://user-images.githubusercontent.com/39941574/176011987-b548d901-2c38-4d11-ab6a-33e09e069797.png)
 
+## Available Scripts
 In the project directory, you can run:
 
 ### `yarn start`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
