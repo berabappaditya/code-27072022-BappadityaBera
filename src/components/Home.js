@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductCard, AboutCard } from "./ProductCard.js";
-import { WavyDiv } from "./Icons.js";
+import { WavyDiv, MenuBar, Arrowdown, SearcIcon } from "./Icons.js";
 
 const Home = () => {
   const products = [
@@ -36,10 +36,12 @@ const Home = () => {
       details:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
       abtcardimg: {
-        width: "50%",
-        height: "50%",
+        width: "90%",
+        height: "267px",
       },
+      cstClass: "col-md-5",
     },
+
     {
       image:
         "https://res.cloudinary.com/aditya-college-of-engineering-technology/image/upload/v1656224753/pexels-max-vakhtbovych-6492403_1_pgbiyw.png",
@@ -47,20 +49,23 @@ const Home = () => {
       details:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
       abtcardimg: {
-        width: "50%",
-        height: "50%",
+        width: "90%",
+        height: "333px",
       },
+      cstClass: "col-md-7",
     },
+
     {
       image:
         "https://res.cloudinary.com/aditya-college-of-engineering-technology/image/upload/v1656224751/pexels-houzlook-com-3356416_2_femxsq.png",
-      title:
-        "ChLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunapter III",
-      details: "",
+      title: "Chapter III",
+      details:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
       abtcardimg: {
-        width: "50%",
-        height: "50%",
+        width: "90%",
+        height: "503px",
       },
+      cstClass: "col-md-5",
     },
     {
       image:
@@ -69,9 +74,10 @@ const Home = () => {
       details:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
       abtcardimg: {
-        width: "50%",
-        height: "50%",
+        width: "90%",
+        height: "500px",
       },
+      cstClass: "col-md-7",
     },
   ];
 
@@ -86,8 +92,11 @@ const Home = () => {
               <div>about us</div>
               <div>Cites</div>
               <div>
-                <button>Call</button>
+                <button style={{ padding: "6px 40px" }}>Call</button>
               </div>
+            </div>
+            <div className="menuicon">
+              <MenuBar />
             </div>
           </div>
           <header className="headermain">
@@ -102,17 +111,42 @@ const Home = () => {
             className="d-flex center-center"
             style={{ width: "100%", marginBottom: "50px" }}
           >
-            <div className="searchOptions transparent_block">
-              <div className="searchoption">Select your city</div>
-              <div className="searchoption">Select your dates</div>
-              <div className="searchoption">Add guests</div>
-              <button>search</button>
+            <div className="searchOptions transparent_block row">
+              {/* Bootstrap is not used  all classes are selfmade*/}
+              {/* Bootstrap is not used  all classes are selfmade*/}
+              {/* Bootstrap is not used  all classes are selfmade*/}
+              {/* Bootstrap is not used  all classes are selfmade*/}
+              <div className="searchoption col-sm-3">
+                <p style={{ color: "#6D6D6D", fontSize: "6px;" }}>CITY</p>
+                Select your city
+              </div>
+              <div className="searchoption col-sm-3">
+                <p style={{ color: "#6D6D6D", fontSize: "6px;" }}>DATES</p>
+                Select your dates
+              </div>
+              <div className="searchoption col-sm-3">
+                <p style={{ color: "#6D6D6D", fontSize: "6px;" }}>GUESTS</p>
+                Add guests
+              </div>
+              <button
+                className="srcbutton col-sm-3 d-flex center-center"
+                style={{ fontSize: "26px", height: "100%", fontWeigt: "500" }}
+              >
+                <SearcIcon />
+                &nbsp; Search
+              </button>
             </div>
+          </div>
+          <div className="d-flex center-center">
+            <Arrowdown />
           </div>
         </div>
       </div>
-      <WavyDiv style={{ marginTop: "-100px" }} />
+      <div className="Hidewave">
+        <WavyDiv />
+      </div>
 
+      {/* <div className="wavyDiv" style={{ width: "100%" }}></div> */}
       <div className="section2">
         <div className="subsecbody">
           <div className="subsechead">
@@ -137,7 +171,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="section3">
+      <div className="section3" style={{ marginTop: "150px" }}>
         <div className="subsecbody">
           <div className="subsechead">
             <h1>About us</h1>
@@ -152,6 +186,7 @@ const Home = () => {
                   title={item.title}
                   details={item.details}
                   abtcardimg={item.abtcardimg}
+                  cstClass={item.cstClass}
                 />
               );
             })}
@@ -161,7 +196,15 @@ const Home = () => {
       <div className="footer">
         <div className="subsecbody">
           <div className="footernav">
-            <div className="footerlogo">Your Logo</div>
+            <div className="footer_logo_container">
+              <div className="footerlogo">Your Logo</div>
+              <p>
+                2021 Company Name
+                <br />
+                All rights reserved
+              </p>
+            </div>
+
             <div className="footernavmenu">
               <div>Explore</div>
               <div>about us</div>
