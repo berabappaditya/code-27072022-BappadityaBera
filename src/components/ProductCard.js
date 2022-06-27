@@ -5,8 +5,8 @@ export const ProductCard = (props) => {
       <div className="productCard__image">
         <img src={props.image} alt="product" />
       </div>
-      <div className="productCard__info transparent_block row info-margin">
-        <div className="productCard__info col-8 ">
+      <div className="productCard__body transparent_block row info-margin">
+        <div className="productCard__info col-sm-8 ">
           {" "}
           <p
             style={{
@@ -21,14 +21,11 @@ export const ProductCard = (props) => {
           <button className="grd_btn" style={{ padding: "5px 18px" }}>
             {props.price}
           </button>
-          <button
-            className="grd_btn"
-            style={{ padding: "3px 18px", marginLeft: "40px" }}
-          >
+          <button className="grd_btn size_btn" style={{ padding: "3px 18px" }}>
             {props.size}
           </button>
         </div>
-        <div className="productCard__book col-4 d-flex center-center">
+        <div className="productCard__book col-sm-4 d-flex center-center">
           <button className="grd_btn" style={{ padding: "15px 25px" }}>
             <b> Book!</b>
           </button>

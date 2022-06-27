@@ -10,9 +10,11 @@
   border-radius: 30px;
 }
 
-.productCard__info {
+.productCard__body {
   width: 70%;
-  padding: 10px;
+}
+.productCard__info {
+  padding: 0 0 20px 20px;
 }
 .productCard__info button {
   border-radius: 7px;
@@ -21,6 +23,25 @@
 
 .info-margin {
   margin-left: 50px;
+}
+
+.size_btn {
+  margin-left: 40px;
+}
+
+.productCard__book > button {
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 760px) {
+  .productCard__book {
+    justify-content: start;
+    padding: 0 10px;
+  }
+
+  .size_btn {
+    margin-left: 10px;
+  }
 }
 
 /*about card*/
