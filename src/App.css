@@ -20,6 +20,50 @@
   background: linear-gradient(90deg, #ff594c 0%, #fac527 100%);
   border: none;
 }
+.grd_btn:hover {
+  background: linear-gradient(45deg, #ff594c 0%, #fac527 100%);
+  border: none;
+  animation: grow 2s ease-in-out infinite;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bouncy:hover {
+  animation: slidedown 2s ease-in-out infinite;
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(3px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-3px);
+    opacity: 0.5;
+  }
+}
+
 /*common styles end*/
 
 /*section1 css*/
@@ -106,7 +150,7 @@ header h4 {
 }
 
 .searchOptions {
-  width: 80%;
+  width: 70%;
   padding: 10px;
   display: flex;
   justify-content: space-around;
@@ -120,7 +164,15 @@ header h4 {
   border: none;
   font-size: 22px;
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: 10px;
+  color: #fff;
+}
+.srcbutton:hover {
+  background: linear-gradient(45deg, #ff594c 0%, #fac527 100%);
+  border: none;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 10px;
   color: #fff;
 }
 
@@ -198,8 +250,35 @@ header h4 {
 }
 
 /*section4 css end*/
+/*mobile styles */
+
+.mobileMenu {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.297);
+}
+.mobileMenu > div {
+  padding: 10px 10px 10px 20px;
+  position: relative;
+  top: 10%;
+  left: 40%;
+  width: 30%;
+  background-color: #fff;
+}
+/* mobile style end*/
 
 /*responsive styles*/
+@media only screen and (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .section1 {
     margin-bottom: -50px;
@@ -235,6 +314,12 @@ header h4 {
   }
   .section1 {
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .srcbutton {
+    margin: 18px 0 18px 0;
   }
 }
 

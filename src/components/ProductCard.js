@@ -11,7 +11,7 @@ export const ProductCard = (props) => {
           <p
             style={{
               fontSize: "16px",
-              fontWeigt: "500",
+              fontWeight: "500",
               marginBottom: "10px",
               color: "black",
             }}
@@ -46,8 +46,16 @@ export const AboutCard = (props) => {
       </div>
       <div className="aboutCard__info transparent_block info-margin">
         <div>
-          <b>{props.title}</b>
-          <br />
+          <p
+            style={{
+              fontSize: "24px",
+              fontWeight: "700",
+              margin: "5px 0 10px 0 ",
+            }}
+          >
+            {props.title}
+          </p>
+
           {props.details}
         </div>
       </div>

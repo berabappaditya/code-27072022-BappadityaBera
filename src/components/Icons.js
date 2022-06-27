@@ -34,13 +34,13 @@ export const SearcIcon = () => {
   );
 };
 
-export const Arrowdown = () => {
+export const Arrowdown = (props) => {
   return (
     <svg
-      width="35"
-      height="35"
+      width={props.width}
+      height={props.height}
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
+      className={`h-6 w-6 ${props.class}`}
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProductCard, AboutCard } from "./ProductCard.js";
 import { WavyDiv, MenuBar, Arrowdown, SearcIcon } from "./Icons.js";
 
 const Home = () => {
+  const [show, setShow] = useState(false);
   const products = [
     {
       image:
@@ -90,15 +91,50 @@ const Home = () => {
             <div className="navmenu">
               <div>Explore</div>
               <div>about us</div>
-              <div>Cites</div>
+              <div
+                className="d-flex center-center"
+                style={{ textSize: "20px" }}
+              >
+                Cites&nbsp;
+                <Arrowdown width={"20px"} height={"20px"} class={"bouncy"} />
+              </div>
               <div>
                 <button style={{ padding: "6px 40px" }}>Call</button>
               </div>
             </div>
-            <div className="menuicon">
+            <div
+              className="menuicon"
+              onClick={() => {
+                console.log("clicked m bar");
+                setShow(!show);
+              }}
+            >
               <MenuBar />
             </div>
           </div>
+
+          {show && (
+            <div
+              className="mobileMenu"
+              onClick={() => {
+                setShow(!show);
+              }}
+            >
+              <div>
+                <div
+                  onClick={() => {
+                    setShow(!show);
+                  }}
+                >
+                  close [x]
+                </div>
+                <div>Explore</div>
+                <div>about us</div>
+                <div>Cites</div>
+                <div>Call</div>
+              </div>
+            </div>
+          )}
           <header className="headermain">
             <h1>
               {" "}
@@ -117,15 +153,15 @@ const Home = () => {
               {/* Bootstrap is not used  all classes are selfmade*/}
               {/* Bootstrap is not used  all classes are selfmade*/}
               <div className="searchoption col-sm-3">
-                <p style={{ color: "#6D6D6D", fontSize: "6px;" }}>CITY</p>
+                <p style={{ color: "#6D6D6D" }}>CITY</p>
                 Select your city
               </div>
               <div className="searchoption col-sm-3">
-                <p style={{ color: "#6D6D6D", fontSize: "6px;" }}>DATES</p>
+                <p style={{ color: "#6D6D6D" }}>DATES</p>
                 Select your dates
               </div>
               <div className="searchoption col-sm-3">
-                <p style={{ color: "#6D6D6D", fontSize: "6px;" }}>GUESTS</p>
+                <p style={{ color: "#6D6D6D" }}>GUESTS</p>
                 Add guests
               </div>
               <button
@@ -138,7 +174,7 @@ const Home = () => {
             </div>
           </div>
           <div className="d-flex center-center">
-            <Arrowdown />
+            <Arrowdown width={"35px"} height={"35px"} class={"bouncy"} />
           </div>
         </div>
       </div>
@@ -193,7 +229,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="footer">
+      <div className="footer" style={{ marginTop: "200px" }}>
         <div className="subsecbody">
           <div className="footernav">
             <div className="footer_logo_container">
@@ -205,11 +241,11 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="footernavmenu">
-              <div>Explore</div>
-              <div>about us</div>
-              <div>Cites</div>
-              <div>
+            <div className="footernavmenu row">
+              <div className="col-sm-3">Explore</div>
+              <div className="col-sm-3">about us</div>
+              <div className="col-sm-3">Cites</div>
+              <div className="col-sm-3">
                 <button>Call</button>
               </div>
             </div>
